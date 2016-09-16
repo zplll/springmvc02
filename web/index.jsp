@@ -8,9 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>index</title>
+    <title>注册</title>
   </head>
   <body>
-    dddddddd
+    注册啦：
+  <form action="/zhuce">
+    用户名：<input type="text" name="username"/>
+    密&nbsp;码<input type="password" name="password"/>
+    <input type="submit"/>
+  </form>
   </body>
 </html>
