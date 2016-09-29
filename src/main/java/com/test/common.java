@@ -14,4 +14,14 @@ public class common {
         stmt.executeUpdate(sqlstr);
         System.out.println("执行完成");
     }
+
+    public static ResultSet mysqlselect(String sqlstr) throws ClassNotFoundException, SQLException {
+        Class.forName("com.mysql.jdbc.Driver");
+        String url="jdbc:mysql://192.168.1.10:3306/qiu?user=root&password=888888";
+        Connection conn= DriverManager.getConnection(url);
+        Statement stmt=conn.createStatement();
+        ResultSet rs=stmt.executeQuery(sqlstr);
+        System.out.println("执行查询完成");
+        return rs;
+    }
 }

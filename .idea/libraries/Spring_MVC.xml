@@ -7,6 +7,8 @@
       <root url="jar://$PROJECT_DIR$/../springmvc-1/lib/spring-websocket-4.3.1.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/spring-webmvc-4.3.1.RELEASE-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
