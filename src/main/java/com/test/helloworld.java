@@ -7,11 +7,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.InputStream;
 import java.nio.charset.Charset;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import static com.test.common.mysqlselect;
 
@@ -71,6 +75,18 @@ public class helloworld {
 
         return String.valueOf(resdata);
     }
+    @RequestMapping("movie")
+    public ModelAndView movie(){
+        return new ModelAndView("movie");
+    }
+
+    @RequestMapping("getFilms")
+    @ResponseBody
+    public  String getFilms() throws Exception {
+        List<String> imgs= filesEach.showAllFiles(new File("D:\\worktools\\zptest\\douban"));
+        return imgs.toString();
+    }
+
     public static void threadTest(){
         Runnable th=new Runnable() {
             public void run() {

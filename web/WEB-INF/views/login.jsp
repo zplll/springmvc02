@@ -39,10 +39,5 @@
         window.location="/";
     }
 </script>
-<script>
-    var app=angular.module('myapp',[]);
-    app.controller('control01',function ($scope) {
 
-    })
-</script>
 </html>
